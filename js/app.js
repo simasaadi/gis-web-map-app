@@ -62,6 +62,7 @@ btnToggle.addEventListener("click", () => {
 const DATA_URL = "https://raw.githubusercontent.com/simasaadi/gis-spatial-data-engineering/main/data/outputs/web/ne_10m_populated_places_canada.geojson";
 
 
+
 async function loadExternalGeoJson() {
   if (!DATA_URL) {
     statusEl.textContent =
@@ -96,4 +97,5 @@ loadExternalGeoJson().catch((err) => {
   console.error(err);
   statusEl.textContent = `❌ Error loading external data:\n${err.message}`;
 });
+
 
