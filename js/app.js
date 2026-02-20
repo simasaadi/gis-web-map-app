@@ -50,7 +50,8 @@ btnToggle.addEventListener("click", () => {
 });
 
 // 4) Data loading hook (Repo #1 output)
-const DATA_URL = ""; // TODO: set later
+const DATA_URL = ""; // e.g. https://<user>.github.io/<repo1>/data/urban_areas.geojson
+
 
 async function loadExternalGeoJson() {
   if (!DATA_URL) {
