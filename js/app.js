@@ -96,3 +96,4 @@ loadExternalGeoJson().catch((err) => {
   console.error(err);
   statusEl.textContent = `❌ Error loading external data:\n${err.message}`;
 });
+
