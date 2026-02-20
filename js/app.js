@@ -238,7 +238,7 @@ async function loadExternalGeoJson() {
   if (overlayVisible !== false) overlay.addTo(map);
 
   // Fit bounds to Canada, but don't zoom out to "tiny world"
-  const bounds = overlay.getBounds?.();
+  const bounds = overlay.getBounds?.()
   if (bounds && bounds.isValid()) map.fitBounds(bounds, { padding: [20, 20], maxZoom: 5 });
 
   // Add legend + scale once
@@ -263,4 +263,5 @@ loadExternalGeoJson().catch((err) => {
   statusEl.textContent = `❌ Error loading external data:\n${err.message}`;
 });statusEl.textContent = `❌ Error loading external data:\n${err.message}`;
 });
+
 
