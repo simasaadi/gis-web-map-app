@@ -30,11 +30,19 @@ const demoGeoJson = {
   ]
 };
 
-let overlay = L.geoJSON(demoGeoJson, {
+overlay = L.geoJSON(gj, {
+  style: () => ({ weight: 2, fillOpacity: 0.15 }),
   onEachFeature: (feature, layer) => {
-    layer.bindPopup(feature.properties?.name ?? "Feature");
+    const props = feature.properties ?? {};
+    const name = props.name || props.NAME10 || props.NAMELSAD10 || "Feature";
+
+    layer.bindPopup(`<strong>${name}</strong>`);
+
+    layer.on("mouseover", () => layer.setStyle({ weight: 4, fillOpacity: 0.25 }));
+    layer.on("mouseout", () => layer.setStyle({ weight: 2, fillOpacity: 0.15 }));
   }
 }).addTo(map);
+
 
 let overlayVisible = true;
 
