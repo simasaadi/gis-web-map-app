@@ -59,7 +59,7 @@ btnToggle.addEventListener("click", () => {
 
 // 4) Data loading hook (Repo #1 output)
 
-const DATA_URL = "https://simasaadi.github.io/gis-spatial-data-engineering/data/urban_areas_demo.geojson";
+const DATA_URL = "https://raw.githubusercontent.com/simasaadi/gis-spatial-data-engineering/main/data/outputs/web/ne_10m_populated_places.geojson";
 
 
 async function loadExternalGeoJson() {
