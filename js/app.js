@@ -30,7 +30,7 @@ const demoGeoJson = {
   ]
 };
 
-overlay = L.geoJSON(gj, {
+let overlay = L.geoJSON(demoGeoJson, {
   style: () => ({ weight: 2, fillOpacity: 0.15 }),
   onEachFeature: (feature, layer) => {
     const props = feature.properties ?? {};
@@ -97,6 +97,7 @@ loadExternalGeoJson().catch((err) => {
   console.error(err);
   statusEl.textContent = `❌ Error loading external data:\n${err.message}`;
 });
+
 
 
 
